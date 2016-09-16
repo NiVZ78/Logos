@@ -1,0 +1,40 @@
+{
+    "author": "NiVZ",
+    "dependencies": {},
+    "keywords": [],
+    "name": "logos",
+    "pebble": {
+        "displayName": "LOGOS",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/SW2.png",
+                    "name": "IMAGE_2",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/SW1.png",
+                    "name": "IMAGE_1",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+        ],
+        "uuid": "32166f8b-debd-4fa4-bb45-f99170a5552d",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
