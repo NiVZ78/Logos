@@ -44,10 +44,13 @@ static void change_image(){
   APP_LOG(APP_LOG_LEVEL_DEBUG, "HEAP AFTER DESTROY: %zu", heap_bytes_free());
   
   // Divide by the number of logos in each image to get the array index of the multi logo image to load
-  s_multi_logo = gbitmap_create_with_resource(IMAGE_ID[image_no / LOGOS_PER_IMAGE]);
-  
+  int multi_logo_number = image_no / LOGOS_PER_IMAGE;
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "** Using MULTI IMAGE: %d", multi_logo_number);
+  s_multi_logo = gbitmap_create_with_resource(IMAGE_ID[multi_logo_number]);
+    
   // Get the remainder of dividing by 4 to select the individual logo to cut out
   int logo_number = image_no%4;
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "** Using SUB IMAGE: %d", logo_number);
   s_logo = gbitmap_create_as_sub_bitmap(s_multi_logo, GRect(55 * logo_number, 0, LOGO_WIDTH, LOGO_HEIGHT));
   
   uint8_t image_width = gbitmap_get_bounds(s_logo).size.w;
